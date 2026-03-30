@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineControl - Cadastro Filmes</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">CineControl</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="cadastro-filmes.html">Filmes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cadastro-salas.html">Salas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cadastro-sessoes.html">Sessões</a></li>
+                    <li class="nav-item"><a class="nav-link" href="venda-ingressos.html">Venda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sessoes.html">Ver Sessões</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container shadow-sm p-4 bg-white rounded">
+        <h2 class="mb-4">Cadastrar Novo Filme</h2>
+
+        <form id="formFilme">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="titulo" class="form-label">Título do Filme</label>
+                    <input type="text" id="titulo" class="form-control" required placeholder="Ex: Interestellar">
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label for="genero" class="form-label">Gênero</label>
+                    <input type="text" name="form-control" id="genero" required placeholder="Ex: Ação, Drama">
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="descricao" class="form-label"> Descrição / Sinopse</label>
+                <textarea id="descricao" class="form-control" rows="3" required></textarea>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label for="classificacao" class="form-label">Classificação</label>
+                    <select id="classificacao" class="form-select" required>
+                        <option value="">Selecione...</option>
+                        <option value="L">Livre</option>
+                        <option value="10">10 anos</option>
+                        <option value="12">12 anos</option>
+                        <option value="14">14 anos</option>
+                        <option value="16">16 anos</option>
+                        <option value="18">18 anos</option>
+                    </select>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <label for="duracao" class="form-label">Duração (minutos)</label>
+                    <input type="number" id="duracao" class="form-control">
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <label for="estreia" class="form-label">Data de Estreia</label>
+                    <input type="date" id="estreia" class="form-control" required>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 mt-3">Salvar Filme</button>
+        </form>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

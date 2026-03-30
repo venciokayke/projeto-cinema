@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CineControl - Home</title>
+    <title>CineControl - Cadastro Sala</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
@@ -28,42 +28,38 @@
         </div>
     </nav>
 
-    <main class="container text-center">
-        <h1 class="display-4">Bem-vindo ao CineControl</h1>
-        <p class="lead">Gerencie filmes, salas e vendas de forma simples e rápida.</p>
-        <hr>
-        <div class="row g-4 mt-2">
-            <div class="col-md-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title">Filmes</h5>
-                        <p class="card-text">Cadastre novos títulos no catálogo.</p>
-                        <a href="cadastro-filmes.html" class="btn btn-primary">Acessar</a>
+    <main class="container shadow-sm p-4 bg-white rounded">
+        <h2 class="mb-4">Cadastrar Nova Sala</h2>
+
+        <form id="formSala">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="nomeSala" class="form-label">Nome da Sala</label>
+                    <input type="text" id="nomeSala" class="form-control" required>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <label for="capacidade" class="form-label">Capacidade de Pessoas</label>
+                    <input type="number" id="capacidade" class="form-control">
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label for="tipo" class="form-label">Tipo de Sala</label>
+                        <select id="tipo" class="form-select" required>
+                            <option value="">Selecione...</option>
+                            <option value="2d">2D</option>
+                            <option value="3d">3D</option>
+                            <option value="imax">IMAX</option>
+                        </select>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title">Venda de Ingressos</h5>
-                        <p class="card-text">Realize vendas para as sessões ativas.</p>
-                        <a href="venda-ingressos.html" class="btn btn-success">Vender Agora</a>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col-md-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title">Relatório</h5>
-                        <p class="card-text">Veja as sessões disponíveis.</p>
-                        <a href="sessoes.html" class="btn btn-info text-white">Visualizar</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>    
+            <button type="submit" class="btn btn-primary w-100 mt-3">Salvar Sala</button>
+        </form>
+    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

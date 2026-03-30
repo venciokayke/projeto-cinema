@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineControl - Venda de Ingressos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <!-- Menu (Padrão) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">CineControl</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="cadastro-filmes.html">Filmes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cadastro-salas.html">Salas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cadastro-sessoes.html">Sessões</a></li>
+                    <li class="nav-item"><a class="nav-link" href="venda-ingressos.html">Venda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sessoes.html">Ver Sessões</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container shadow-sm p-4 bg-white rounded">
+        <h2 class="mb-4">Finalizar Venda</h2>
+
+        <form id="formVenda">
+            <div class="mb-3">
+                <label for="sessaoVenda" class="form-label">Sessão Disponível</label>
+                <select id="sessaoVenda" class="form-select" required>
+                    <option value="">Selecione a sessão...</option>
+                    
+                </select>
+            </div>
+
+            <div class="row">
+                
+                <div class="col-md-8 mb-3">
+                    <label for="nomeCliente" class="form-label">Nome do Cliente</label>
+                    <input type="text" id="nomeCliente" class="form-control" required placeholder="Nome Completo">
+                </div>
+
+                
+                <div class="col-md-4 mb-3">
+                    <label for="cpfCliente" class="form-label">CPF</label>
+                    <input type="text" id="cpfCliente" class="form-control" required placeholder="000.000.000-00">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="assento" class="form-label">Assento (Ex: A10, B5)</label>
+                    <input type="text" id="assento" class="form-control" required maxlength="3" style="text-transform: uppercase;">
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label for="pagamento" class="form-label">Tipo de Pagamento</label>
+                    <select id="pagamento" class="form-select" required>
+                        <option value="Cartão">Cartão de Crédito/Débito</option>
+                        <option value="Pix">Pix</option>
+                        <option value="Dinheiro">Dinheiro</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="d-grid gap-2 mt-4">
+                <button type="submit" class="btn btn-success btn-lg">Confirmar Venda</button>
+            </div>
+        </form>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
